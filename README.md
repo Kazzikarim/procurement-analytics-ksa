@@ -1,9 +1,12 @@
-# procurement-analytics-ksa
+Title: Procurement & Cost Control Analytics – KSA Oil & Gas (Simulated ERP Data)
 
-Title: Procurement Analytics Dashboard (KSA Oil & Gas Simulation)
+I am building a Power BI dashboard that shows procurement delays, supplier performance, and cost leakage using ERP-style tables.
+The Dashboard is designed for Procurement Manager + Cost Control Analyst
 
 Business problem:
-Procurement teams need visibility into cycle time, supplier performance, and spend leakage to reduce delays and control cost.
+Procurement leadership lacks consolidated visibility into purchasing cycle delays, supplier reliability, and cost leakage across departments, causing budget overruns and operational delays.
+
+
 
 KPIs included:
 
