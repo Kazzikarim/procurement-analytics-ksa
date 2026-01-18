@@ -134,17 +134,17 @@ df_del = pd.DataFrame(deliveries)
 budgets = []
 for dept in departments:
     base = {
-        "Procurement": 8_000_000,
-        "Maintenance": 10_000_000,
-        "Operations": 14_000_000,
-        "Plant": 18_000_000,
-        "HR": 4_000_000,
-        "Finance": 3_500_000
+        "Procurement": 1_200_000,
+        "Maintenance": 1_500_000,
+        "Operations": 2_000_000,
+        "Plant": 2_500_000,
+        "HR": 600_000,
+        "Finance": 500_000
     }[dept]
     for m in range(1, 13):
         month_date = date(2025, m, 1)
         bump = 1.10 if (dept in ("Plant", "Operations") and m in (10, 11, 12)) else 1.0
-        noise = random.uniform(0.90, 1.08)
+        noise = random.uniform(0.95, 1.05)
         amt = round(base * bump * noise, 2)
         budgets.append({"Department": dept, "Month": month_date.isoformat(), "Budget_Amount": amt})
 df_budget = pd.DataFrame(budgets)
