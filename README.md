@@ -1,78 +1,95 @@
-Title: Procurement & Cost Control Analytics – KSA Oil & Gas (Simulated ERP Data)
+Procurement Analytics & Cost Control Dashboard (KSA)
+    Project Overview
 
-I am building a Power BI dashboard that shows procurement delays, supplier performance, and cost leakage using ERP-style tables.
+        This project simulates an enterprise procurement analytics dashboard for a Saudi Arabia–based oil & gas–related organization.
+        The goal is to provide decision-ready insights for Procurement, Cost Control, and Operations leadership by analyzing spend, budget utilization, cycle times, and supplier performance.
+        The dashboard is built using Power BI with Python-generated ERP-style transactional data, reflecting realistic procurement workflows (PR → PO → Delivery).
 
-Audience: Procurement Manager / Cost Control Managers
+    Business Problem
 
-Business problem:
-Procurement leadership lacks consolidated visibility into purchasing cycle delays, supplier reliability, and cost leakage across departments, causing budget overruns and operational delays.
+        Procurement leadership needs visibility into:
+        Whether spending is aligned with budget
+        How efficient the procurement process is (cycle times)
+        Which departments and suppliers drive cost and delays
+        Where cost leakage and supplier risks exist
+        This dashboard answers those questions at executive, operational, and supplier levels.
 
-KPIs included:
-PR to PO cycle time
-    What it answers:
-    Are approvals and sourcing slow?
+    Target Users
 
-    Calculation logic:
-    PO_Date – PR_Date
+        Procurement Managers
+        Cost Control & Finance Teams
+        Operations & Plant Management
+        BI / Data Analytics Teams
 
-    Decision impact:
+    Key KPIs
 
-    Identify bottlenecks by department
+        Total Spend
+        Total Budget
+        Budget Utilization %
+        Avg PR → PO Cycle Time (Days)
+        Avg PO → Delivery Lead Time (Days)
+        On-time Delivery %
+        Late Delivery %
+        Price Variance Amount & %
+        Top 5 Supplier Spend %
+        All KPIs are calculated as DAX measures using a star-schema data model.
 
-    Escalate approval delays
-On-time delivery %
-    What it answers:
-    Are suppliers delivering late?
+Dashboard Pages
+    1-Executive Overview
 
-    Calculation logic:
-    Actual_Delivery_Date – PO_Date
+        High-level view for leadership:
+            Budget utilization and spend control
+            Monthly spend vs budget trend
+            Spend distribution by department
+            Key insights summary
 
-    Decision impact:
+        Key Insight Example:
+            Overall budget utilization reached ~104%, driven primarily by Plant and Operations activities in Q4.
 
-    Penalize poor suppliers
+    2-Procurement Efficiency
 
-    Adjust lead times
-Price variance % vs contract
-    What it answers:
-    Are we paying more than contracted prices?
+        Operational performance view:
+            PR → PO and PO → Delivery cycle time trends
+            Department-level efficiency comparison
+            Late delivery analysis
+            Detailed matrix for drill-down
 
-    Calculation logic:
-    (PO_Amount – Contract_Price) / Contract_Price
+    3-Supplier & Cost Control
 
-    Decision impact:
+        Risk and cost leakage view:
+            Price variance % by category
+            Top suppliers by spend
+            Supplier performance scorecard
+            Interactive tooltip for supplier KPIs
 
-    Detect maverick buying
+Data Model
 
-    Trigger contract renegotiation
-Spend by category & department
-    What it answers:
-    Are departments overspending?
+    Fact tables: Purchase Requisitions, Purchase Orders, Deliveries, Budget
+    Dimension tables: Date, Month, Department, Supplier 
+    Separate handling of daily transactional dates and monthly budget periods
 
-    Calculation logic:
-    Actual Spend – Budget
+    Advanced DAX using:
+        TREATAS
+        USERELATIONSHIP
+        Context-aware measures
+        This ensures correct monthly analysis despite mixed date grains.
 
-    Decision impact:
+Tools & Technologies
 
-    Budget freezes
-
-    Reforecasting
-Supplier concentration risk
-    What it answers:
-    Are we over-dependent on few suppliers?
-
-    Calculation logic:
-    Top 5 supplier spend / total spend
-
-    Decision impact:
-
-    Risk mitigation
-
-    Diversification strategy
-
-Tools: Power BI, Excel, SQL (optional)
+    Power BI Desktop
+    Python (data generation & simulation)
+    DAX
+    GitHub
+    CSV datasets
 
 Files:
-/data: CSV tables
-/powerbi: PBIX file
-/screenshots: dashboard images
-/sql: queries for KPI calculations
+    /data
+    └─ CSV files (generated transactional data)
+    /powerbi
+    └─ procurement_analytics_ksa.pbix
+    /screenshots
+    └─ Executive Overview
+    └─ Procurement Efficiency
+    └─ Supplier & Cost Control
+    /docs
+    └─ PDF export of dashboard
