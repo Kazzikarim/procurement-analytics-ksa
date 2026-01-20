@@ -83,7 +83,7 @@ Tools & Technologies
     GitHub
     CSV datasets
 
-Files:
+Files
     /data
         CSV files (generated transactional data)
     /powerbi
