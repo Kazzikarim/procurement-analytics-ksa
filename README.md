@@ -9,11 +9,11 @@ Procurement Analytics & Cost Control Dashboard (KSA)
     Business Problem
 
         Procurement leadership needs visibility into:
-        Whether spending is aligned with budget
-        How efficient the procurement process is (cycle times)
-        Which departments and suppliers drive cost and delays
-        Where cost leakage and supplier risks exist
-        This dashboard answers those questions at executive, operational, and supplier levels.
+            Whether spending is aligned with budget
+            How efficient the procurement process is (cycle times)?
+            Which departments and suppliers drive cost and delays?
+            Where cost leakage and supplier risks exist?
+            This dashboard answers those questions at executive, operational, and supplier levels.
 
     Target Users
 
@@ -85,12 +85,13 @@ Tools & Technologies
 
 Files:
     /data
-    └─ CSV files (generated transactional data)
+        CSV files (generated transactional data)
     /powerbi
-    └─ procurement_analytics_ksa.pbix
+        procurement_analytics_ksa.pbix
     /screenshots
-    └─ Executive Overview
-    └─ Procurement Efficiency
-    └─ Supplier & Cost Control
+        Executive Overview
+        Procurement Efficiency
+        Supplier & Cost Control
+        Tooltip – Supplier
     /docs
-    └─ PDF export of dashboard
+        PDF export of dashboard
